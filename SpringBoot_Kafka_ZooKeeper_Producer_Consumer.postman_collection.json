@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "3a124bb6-bb9f-4d83-b7d9-823f296ac639",
+		"name": "SpringBoot_Kafka_ZooKeeper_Producer_Consumer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/bmwKafka/publish/bmwSevenSeries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/bmwKafka/publish/bmwSevenSeries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"bmwKafka",
+						"publish",
+						"bmwSevenSeries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/bmwKafka/publish/bmwFiveSeries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/bmwKafka/publish/bmwFiveSeries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"bmwKafka",
+						"publish",
+						"bmwFiveSeries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/mercedesKafka/publish/mercedesASeries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/mercedesKafka/publish/mercedesASeries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"mercedesKafka",
+						"publish",
+						"mercedesASeries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/mercedesKafka/publish/mercedesESeries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/mercedesKafka/publish/mercedesESeries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"mercedesKafka",
+						"publish",
+						"mercedesESeries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/landRoverKafka/publish/landRoverOnRoader",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/landRoverKafka/publish/landRoverOnRoader",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"landRoverKafka",
+						"publish",
+						"landRoverOnRoader"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8083/landRoverKafka/publish/landRoverOffRoader",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/landRoverKafka/publish/landRoverOffRoader",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"landRoverKafka",
+						"publish",
+						"landRoverOffRoader"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
