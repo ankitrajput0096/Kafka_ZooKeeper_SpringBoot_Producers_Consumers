@@ -27,12 +27,15 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Installing and Running
 
-To start the kafka cluster
+To build and start the kafka cluster along with spring-boot producers
+```
+docker-compose build
+```
 ```
 docker-compose up
 ```
 
-To start spring-boot based producers and consumers go to each directory and run these commands to start them
+To start spring-boot based consumers go to each directory and run these commands to start them
 ```
 mvn clean install
 ```
@@ -58,7 +61,7 @@ mvn spring-boot:run
 
 ## TODO Items
 
-Things I will be working next for this repository is making all the services dockerized. So, that we don't need to start each producer and consumer spring-boot service separately.
+Things I will be working next for this repository is making all the services dockerized. So, that we don't need to start each consumer spring-boot service separately.
 
 ## Contributing
 
