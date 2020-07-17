@@ -171,3 +171,60 @@ services:
       - kafka1
       - kafka2
       - kafka3
+
+  consumer_showroom_one:
+    build:
+      context: ./Kafka_Consumers/Consumer_One_Car_Showroom
+    command: mvn spring-boot:run
+    restart: always
+    ports:
+      - "8091:8091"
+    links:
+      - kafka1
+      - kafka2
+      - kafka3
+    depends_on:
+      - zoo1
+      - zoo2
+      - zoo3
+      - kafka1
+      - kafka2
+      - kafka3
+
+  consumer_showroom_two:
+    build:
+      context: ./Kafka_Consumers/Consumer_Two_Car_Showroom
+    command: mvn spring-boot:run
+    restart: always
+    ports:
+      - "8092:8092"
+    links:
+      - kafka1
+      - kafka2
+      - kafka3
+    depends_on:
+      - zoo1
+      - zoo2
+      - zoo3
+      - kafka1
+      - kafka2
+      - kafka3
+
+  consumer_showroom_three:
+    build:
+      context: ./Kafka_Consumers/Consumer_Three_Car_Showroom
+    command: mvn spring-boot:run
+    restart: always
+    ports:
+      - "8093:8093"
+    links:
+      - kafka1
+      - kafka2
+      - kafka3
+    depends_on:
+      - zoo1
+      - zoo2
+      - zoo3
+      - kafka1
+      - kafka2
+      - kafka3

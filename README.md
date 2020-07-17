@@ -27,22 +27,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Installing and Running
 
-To build and start the kafka cluster along with spring-boot producers
+To build and start the kafka cluster along with spring-boot producers and consumers, enter these two commands
 ```
 docker-compose build
 ```
 ```
 docker-compose up
 ```
-
-To start spring-boot based consumers go to each directory and run these commands to start them
-```
-mvn clean install
-```
-```
-mvn spring-boot:run
-```
-
 ## Get an access to all exposed API's with Postman for creating event by spring-boot producers
 
 1. Install Postman (https://www.getpostman.com)
@@ -58,10 +49,6 @@ mvn spring-boot:run
 * [Docker](https://www.docker.com/) - For containerization of application
 * [Kafka](https://kafka.apache.org/) - For Kafka servers
 * [ZooKeeper](https://zookeeper.apache.org/) - For ZooKeeper servers
-
-## TODO Items
-
-Things I will be working next for this repository is making all the services dockerized. So, that we don't need to start each consumer spring-boot service separately.
 
 ## Contributing
 

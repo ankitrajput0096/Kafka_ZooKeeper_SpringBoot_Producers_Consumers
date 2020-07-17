@@ -9,12 +9,3 @@ RUN apt-get install -y openjdk-8-jdk maven
 COPY . /Kafka_Consumers/Consumer_Two_Car_Showroom
 WORKDIR /Kafka_Consumers/Consumer_Two_Car_Showroom/consumer_two_car_showroom
 
-# building the spring boot app
-RUN mvn clean install
-
-# Changing the working directory
-WORKDIR /Kafka_Consumers/Consumer_Two_Car_Showroom/consumer_two_car_showroom/target
-
-# running the spring boot app
-CMD ["java", "-jar", "consumer_two_car_showroom-0.0.1-SNAPSHOT.jar"]
-
