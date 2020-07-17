@@ -4,48 +4,49 @@ version: '3.1'
 # mutli node multi broker cluster with three Kafka servers and three ZooKeeper servers
 # NOTE : The kafka Producer and Kafka Consumer will be created using other docker-compose file present in 
 # folder 'Kafka_Producers_Consumers'.
+# NOTE : check this url for kafka and zookeeper version to use together : https://docs.confluent.io/current/installation/versions-interoperability.html
 
 services:
 
   # Creating three Zookeeper servers
   # Zookeeper server 1
   zoo1:
-    image: zookeeper:3.4.9
+    image: zookeeper:3.5.8
     hostname: zoo1
     ports:
       - "2181:2181"
     environment:
         ZOO_MY_ID: 1
         ZOO_PORT: 2181
-        ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=zoo2:2888:3888 server.3=zoo3:2888:3888
+        ZOO_SERVERS: server.1=zoo1:2888:3888;2181 server.2=zoo2:2888:3888;2182 server.3=zoo3:2888:3888;2183
     volumes:
       - ./zk-multiple-kafka-multiple/zoo1/data:/data
       - ./zk-multiple-kafka-multiple/zoo1/datalog:/datalog
   
   # Zookeeper server 2
   zoo2:
-    image: zookeeper:3.4.9
+    image: zookeeper:3.5.8
     hostname: zoo2
     ports:
       - "2182:2182"
     environment:
         ZOO_MY_ID: 2
         ZOO_PORT: 2182
-        ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=zoo2:2888:3888 server.3=zoo3:2888:3888
+        ZOO_SERVERS: server.1=zoo1:2888:3888;2181 server.2=zoo2:2888:3888;2182 server.3=zoo3:2888:3888;2183
     volumes:
       - ./zk-multiple-kafka-multiple/zoo2/data:/data
       - ./zk-multiple-kafka-multiple/zoo2/datalog:/datalog
 
   # Zookeeper server 3    
   zoo3:
-    image: zookeeper:3.4.9
+    image: zookeeper:3.5.8
     hostname: zoo3
     ports:
       - "2183:2183"
     environment:
         ZOO_MY_ID: 3
         ZOO_PORT: 2183
-        ZOO_SERVERS: server.1=zoo1:2888:3888 server.2=zoo2:2888:3888 server.3=zoo3:2888:3888
+        ZOO_SERVERS: server.1=zoo1:2888:3888;2181 server.2=zoo2:2888:3888;2182 server.3=zoo3:2888:3888;2183
     volumes:
       - ./zk-multiple-kafka-multiple/zoo3/data:/data
       - ./zk-multiple-kafka-multiple/zoo3/datalog:/datalog
@@ -53,7 +54,7 @@ services:
   # Creating three Kafka servers
   # Kafka server 1
   kafka1:
-    image: confluentinc/cp-kafka:5.5.0
+    image: confluentinc/cp-kafka:5.5.1
     hostname: kafka1
     ports:
       - "9092:9092"
@@ -76,7 +77,7 @@ services:
 
   # Kafka server 2
   kafka2:
-    image: confluentinc/cp-kafka:5.5.0
+    image: confluentinc/cp-kafka:5.5.1
     hostname: kafka2
     ports:
       - "9093:9093"
@@ -99,7 +100,7 @@ services:
 
   # Kafka server 3
   kafka3:
-    image: confluentinc/cp-kafka:5.5.0
+    image: confluentinc/cp-kafka:5.5.1
     hostname: kafka3
     ports:
       - "9094:9094"
