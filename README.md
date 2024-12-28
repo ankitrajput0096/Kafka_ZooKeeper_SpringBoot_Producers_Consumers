@@ -1,7 +1,6 @@
 # Kafka_ZooKeeper_SpringBoot_Producers_Consumers
 
-Dockerized Kafka Cluster with three kafka servers monitored by three Zookeeper severs.
-Also, this repository contains three spring-boot based producers and consumers
+This project sets up a Dockerized Apache Kafka cluster with three Kafka servers monitored by a three-node Zookeeper ensemble, ensuring high availability and fault tolerance. It also includes three Spring Boot-based producer and consumer applications, demonstrating seamless integration and message processing within the Kafka ecosystem.
 
 ## Getting Started
 
